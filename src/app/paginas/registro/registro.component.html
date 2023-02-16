@@ -1,0 +1,50 @@
+<div id="registro">
+    <button id="botonProfesor" (click)="showData()"><b>Profesor</b></button>
+    <button id="botonAlumno" (click)="hideData()"><b>Alumno</b></button>
+    <form>
+        <hr>
+        <div *ngIf="element == true">
+            <input id="mote" type="text" placeholder="Ponga su mote">
+            <br>
+            <input id="email" type="email" placeholder="Ponga su correo">
+            <br>
+            <input id="contraseña" type="password" placeholder="Ponga su contraseña">
+            <br>
+            <input id="contraseña" type="password" placeholder="Ponga de nuevo su contraseña">
+            <br>
+            <input id="nombre" type="text" placeholder="Ponga su nombre" name="Nombre">
+            <br>
+            <input id="apellidos" type="text" placeholder="Ponga sus apellidos">
+            <br>
+            <input id="centro" type="text" placeholder="Ponga el centro donde trabaja">
+            <br>
+            <button id="registrar" title="Registrar Profesor" routerLink="../home"
+                routerLinkActive="active"><b>Registrar
+                    Profesor</b></button>
+            <hr>
+            <button id="volver" title="Volver" routerLink=""><b>Volver</b></button>
+        </div>
+        <div *ngIf="element == false">
+            <input id="mote" type="text" placeholder="Ponga su mote">
+            <br>
+            <input id="email" type="email" placeholder="Ponga su correo">
+            <br>
+            <input id="contraseña" type="password" placeholder="Ponga su contraseña">
+            <br>
+            <input id="contraseña" type="password" placeholder="Ponga de nuevo su contraseña">
+            <br>
+            <input id="nombre" type="text" placeholder="Ponga su nombre" name="Nombre">
+            <br>
+            <input id="apellidos" type="text" placeholder="Ponga sus apellidos">
+            <br>
+            <p>Ponga su fecha de nacimiento:</p>
+            <input id="fecha" type="date" placeholder="Ponga su fecha de nacimiento">
+            <br>
+            <button id="registrar" title="Registrar Profesor" routerLink="../home"
+                routerLinkActive="active"><b>Registrar
+                    Alumno</b></button>
+            <hr>
+            <button id="volver" title="Volver" routerLink=""><b>Volver</b></button>
+        </div>
+    </form>
+</div>

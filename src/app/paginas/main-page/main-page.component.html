@@ -1,0 +1,23 @@
+<div id="izquierda">
+  <h1>¡¡Bienvenido!!</h1>
+  <p>a la paguina para alumnos y profesores.</p>
+</div>
+
+<form [formGroup]="loginForm" id="derecha">
+  <div>
+    <input formControlName="mote" id="mote" type="text" placeholder="Ponga su mote">
+    <p id="error" *ngIf="this.loginForm.controls.mote.hasError('required')">Campo necesario</p>
+    <br>
+    <input formControlName="password" id="password" type="password" placeholder="Ponga su contraseña">
+    <p id="error" *ngIf="this.loginForm.controls.mote.hasError('required')">Campo necesario</p>
+    <br>
+    <button id="login" [disabled]="!loginForm.valid" routerLink="./home" routerLinkActive="active"
+      title="Iniciar Sesion"><b>Iniciar
+        Sesion</b></button>
+  </div>
+  <hr>
+  <div>
+    <button id="registro" routerLink="./alumnos" routerLinkActive="active"
+      title="Iniciar Sesion"><b>Registro</b></button>
+  </div>
+</form>
