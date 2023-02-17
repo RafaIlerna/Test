@@ -51,6 +51,7 @@ export class ProfesoresComponent implements OnInit {
     };
 
     console.log(profesor);
+    
     if (password === passwordRepe) {
       this.profesores.addProfesores(profesor).subscribe({
         next: (value: Profesores) => {
