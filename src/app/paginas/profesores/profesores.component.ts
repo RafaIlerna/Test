@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ProfesorService } from '../../servicio/profesores.service';
 import { Profesores } from '../../models/profesores.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profesores',
@@ -11,25 +12,23 @@ import { Profesores } from '../../models/profesores.model';
 export class ProfesoresComponent implements OnInit {
 
   registerForm = new FormGroup({
-    mote: new FormControl('', Validators.compose([Validators.required,Validators.pattern('/^[a-z0-9_]+$/')])),
+    mote: new FormControl('', Validators.compose([Validators.required])),
     correo: new FormControl('', Validators.compose([Validators.required, Validators.email])),
     password: new FormControl('', Validators.required),
+
     passwordRepe: new FormControl('', Validators.required),
+
     nombre: new FormControl('', Validators.required),
+
     apellidos: new FormControl('', Validators.required),
+
     centro: new FormControl('', Validators.required),
   });
 
-  constructor(
-    private profesores: ProfesorService
-  ) { }
+  constructor(private profesores: ProfesorService, public router: Router) { }
 
   ngOnInit(): void {
-    this.profesores.getProfesores().subscribe(
-      (value: Profesores[]) => {
-        console.log(value);
-      }
-    )
+
   }
   addProfesor(): void {
     let mote = this.registerForm.controls.mote.value!;
@@ -40,17 +39,20 @@ export class ProfesoresComponent implements OnInit {
     let centro = this.registerForm.controls.centro.value!;
 
     const profesor: Profesores = {
-      mote: mote,
-      correo: correo,
-      password: password,
-      nombre: nombre,
-      apellidos: apellidos,
-      centro: centro
+      "mote": mote,
+      "correo": correo,
+      "password": password,
+      "nombre": nombre,
+      "apellidos": apellidos,
+      "centro": centro
     };
-    this.profesores.addProfesores(profesor).subscribe({
 
+    console.log(profesor);
+
+    this.profesores.addProfesores(profesor).subscribe({
       next: (value: Profesores) => {
-        console.log(value)
+        console.log(value);
+        this.router.navigate(['home']);
       }
     });
 
