@@ -46,7 +46,7 @@ export class MainPageComponent implements OnInit {
     };
 
     console.log(login);
-
+    
     this.alumnos.login(login).subscribe({
       next: (value: Alumnos) => {
         console.log(value)
