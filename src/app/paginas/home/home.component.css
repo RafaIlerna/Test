@@ -1,0 +1,7 @@
+#Usuario{background-color: aqua; float: left; text-align:center;}
+#Ranking{background-color: aquamarine; position: absolute; bottom: 0;}
+#InfoUser{background-color: brown;}
+#InfoUser.li{text-align: center;}
+ul.InfoUser{text-align: center;}
+
+#ProPic{ width:200px;height:200px;}
