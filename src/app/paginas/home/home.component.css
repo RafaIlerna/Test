@@ -1,12 +1,49 @@
-#Usuario{background-color: aqua; float: left; text-align:center;}
-#Ranking{border-radius: 10px; box-shadow: 5px 5px 2px grey; 
-    background-color: blueviolet; position: absolute; bottom: 0;}
-#InfoUser{color: blue;background-color: brown;}
-#InfoUser.li{color: blue;}
-/* ul.InfoUser{text-align: center;} */
-p {
+/* https://www.google.com/search?q=bem+naming+convention&rlz=1C1YTUH_esES1006ES1010&oq=bem+naming+convention&aqs=chrome..69i57j0i22i30i625j0i22i30j0i22i30i625j0i22i30l2j0i22i30i625j0i22i30l3.4464j0j7&sourceid=chrome&ie=UTF-8 */
+#Usuario{ /* DIV de la foto */
+  background-color: aqua;
+  display:inline;
+  float: left;
+  position: relative;
+  text-align:center;
+  border-radius: 5px; 
+  box-shadow: 5px 5px 2px grey;
+}
+#InfoUser{ /* DIV de la informacion del usuario */
+  background-color: brown;
+  color: blue;
+  display: inline-flexbox;
+  margin: 0px 0px 500px 210px; 
+  padding: 0px 0px 400px 0px; 
+  border-radius: 10px; 
+  box-shadow: 5px 5px 2px grey;
+}
+#Ranking{ /* DIV del ranking */
+  background-color: blueviolet;
+  position: absolute;
+  margin: 0px 0px 0px 0px; 
+  padding: 0px 112px 100px 0px; 
+  bottom: 39%;
+  /* text-align: start; */
+  border-radius: 10px;
+  box-shadow: 5px 5px 2px grey; 
+}
+#cosa{ 
+  background-color: aquamarine;
+}
+#InfoUser li{color: blue;}
+#InfoUser ul{color: salmon;}
+p{
     font-family: Arial;
     font-size: 20px;
-  }
+ }
 
-#ProPic{ width:200px;height:200px; border-radius: 50%;}
+#ProPic{ /* Modificador de la foto perfil hace que la foto sea circulary otras cosas */
+  width:200px;height:200px; 
+  border-radius: 50%;
+}
+#BtnPsw{ /* Boton de la contraseña */
+  color:white; 
+  margin:auto; 
+  border-radius: 15%;
+  background-color:#00B1FF;
+}
