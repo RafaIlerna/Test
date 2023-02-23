@@ -1,7 +1,12 @@
 #Usuario{background-color: aqua; float: left; text-align:center;}
-#Ranking{background-color: aquamarine; position: absolute; bottom: 0;}
-#InfoUser{background-color: brown;}
-#InfoUser.li{text-align: center;}
-ul.InfoUser{text-align: center;}
+#Ranking{border-radius: 10px; box-shadow: 5px 5px 2px grey; 
+    background-color: blueviolet; position: absolute; bottom: 0;}
+#InfoUser{color: blue;background-color: brown;}
+#InfoUser.li{color: blue;}
+/* ul.InfoUser{text-align: center;} */
+p {
+    font-family: Arial;
+    font-size: 20px;
+  }
 
-#ProPic{ width:200px;height:200px;}
+#ProPic{ width:200px;height:200px; border-radius: 50%;}
