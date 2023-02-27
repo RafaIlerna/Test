@@ -12,8 +12,15 @@
   background-color: brown;
   color: blue;
   display: inline-flexbox;
-  margin: 0px 0px 500px 210px; 
-  padding: 0px 0px 400px 0px; 
+  /* margin: 0px 0px 500px 210px; 
+  padding: 0px 0px 400px 0px;  */
+  height: 60%;
+  position: relative;
+  left: 23%;
+  top: 1%;
+  width: 75%;
+  position: fixed;
+
   border-radius: 10px; 
   box-shadow: 5px 5px 2px grey;
 }
